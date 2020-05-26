@@ -1,10 +1,11 @@
 from ..models import Tarefa
 
 def cadastrar_tarefa(tarefa):
-    Tarefa.objects.create(titulo=tarefa.titulo, descricao=tarefa.descricao, data_expiracao=tarefa.data_expiracao, prioridade=tarefa.prioridade)
+    Tarefa.objects.create(titulo=tarefa.titulo, descricao=tarefa.descricao,
+                          data_expiracao=tarefa.data_expiracao, prioridade=tarefa.prioridade, usuario=tarefa.usuario)
 
-def listar_tarefas():
-    return Tarefa.objects.all()
+def listar_tarefas(usuario):
+    return Tarefa.objects.filter(usuario=usuario).all()
 
 def listar_tarefa_id(id):
     return Tarefa.objects.get(id=id)
