@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import TarefaForm
-from .entidades.tarefa import Tarefa
-from .services import tarefa_services
+from gerenciador_tarefas.app.forms import TarefaForm
+from gerenciador_tarefas.app.entidades.tarefa import Tarefa
+from gerenciador_tarefas.app.services import tarefa_services
 
 # Create your views here.
 
